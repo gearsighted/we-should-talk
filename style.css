@@ -1,9 +1,6 @@
 :root {
-  --background: rgb(26, 195, 237);
-  --color-primary-dark: #303a52;
-  --color-accent: #9e579d;
-  --color-white: snow;
-  --navBar-height: auto;
+  --background: rgba(26, 195, 237, 1);
+  --scrolled-background: rgba(26, 195, 237, 0.5);
 }
 
 *,
@@ -29,13 +26,8 @@ header {
   z-index: 999;
   width: 100%;
   margin-bottom: 0;
+  transition: background 500ms ease-in 100ms;
 }
-
-/* .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .logo-section {
   display: flex;
@@ -97,7 +89,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--background);
+  background: inherit;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -192,11 +184,20 @@ nav a:hover {
   }
 }
 
+/* Navbar scroll effect */
+
+.scrolled {
+  background: var(--scrolled-background);
+}
+
+.nav-link-scroll {
+  background: var(--scrolled-background);
+}
+
 /* Hero image section */
 
 .hero {
-  position: relative;
-  height: 90vh;
+  min-height: 85vh;
   width: 100%;
   background-image: url(images/hero.jpg);
   background-position: center;
@@ -205,9 +206,7 @@ nav a:hover {
   background-color: #333;
   display: grid;
   place-items: center;
-  top: 5rem;
   text-align: center;
-  position: relative;
 }
 
 .hero h1 {
@@ -219,4 +218,30 @@ nav a:hover {
 
 .hero p {
   font-size: 2rem;
+}
+
+.latest-episode {
+  min-height: 65vh;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.episodes {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ep1 {
+  width: 40%;
+}
+
+.cyndi-image {
+  background-image: url(images/cyndi.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 75%;
+  height: 100%;
 }

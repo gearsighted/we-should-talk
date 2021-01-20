@@ -1,7 +1,8 @@
 // Navbar effects on scroll
 
-let header = document.querySelector('header');
-let body = document.querySelector('body');
+const header = document.querySelector('header');
+const body = document.querySelector('body');
+const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function() {  
   if (window.scrollY > 0) {
