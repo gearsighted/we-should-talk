@@ -1,6 +1,6 @@
 :root {
-  --background: rgba(26, 195, 237, 1);
-  --scrolled-background: rgba(26, 195, 237, 0.5);
+  --background: rgba(255, 255, 255, 1);
+  --scrolled-background: rgba(219, 217, 217, 0);
 }
 
 *,
@@ -11,10 +11,10 @@
 
 body {
   margin: 0;
+  padding: 0;
   background: white;
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  height: 300vh;
 }
 
 /* Nav styles  */
@@ -26,19 +26,24 @@ header {
   z-index: 999;
   width: 100%;
   margin-bottom: 0;
-  transition: background 500ms ease-in 100ms;
+  transition: background 500ms ease-in 10ms;
+  top: 0;
+  border-radius: 0.35em;
 }
 
 .logo-section {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+}
+
+.logo {
+  width: 75%;
+  margin: auto 0;
 }
 
 .fa-microphone-alt {
   font-size: 1.75rem;
-  padding: 1em;
+  padding: 1em 0.5em;
 }
 
 .nav-toggle {
@@ -108,7 +113,7 @@ nav li {
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -119,7 +124,7 @@ nav a {
 /* transition above is for unclicking the nav-toggle */
 
 nav a:hover {
-  color: #000;
+  color: rgb(110, 111, 112);
 }
 
 .nav-toggle:checked ~ nav {
@@ -190,14 +195,10 @@ nav a:hover {
   background: var(--scrolled-background);
 }
 
-.nav-link-scroll {
-  background: var(--scrolled-background);
-}
-
 /* Hero image section */
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
   width: 100%;
   background-image: url(images/hero.jpg);
   background-position: center;
@@ -209,39 +210,125 @@ nav a:hover {
   text-align: center;
 }
 
+.banner-text {
+  width: 100%;
+  margin: auto;
+}
+
 .hero h1 {
   font-size: 5rem;
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.2em;
 }
 
 .hero p {
   font-size: 2rem;
+  letter-spacing: 0.1em;
 }
 
 .latest-episode {
   min-height: 65vh;
   width: 100%;
-  margin-top: 5rem;
+  padding: 2rem;
+}
+
+.latest-episode h2 {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+.latest-episode p {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+}
+
+.latest-episode__banner {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.latest-episode__banner h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .episodes {
-  height: 100%;
+  min-height: 50vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-.ep1 {
-  width: 40%;
+.single__episode {
+  width: 50%;
+  padding: 2em;
 }
 
-.cyndi-image {
-  background-image: url(images/cyndi.jpg);
+.episode-1-image {
+  min-height: 20rem;
+  background-image: url(images/cyndi-portrait.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 75%;
-  height: 100%;
+}
+.episode-2-image {
+  min-height: 20rem;
+  background-image: url(images/scream-kid-mic.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Single Episode Page Template */
+
+.hero__ep1 {
+  min-height: 60vh;
+  background-image: url(images/cyndi-portrait.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero__ep1 h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2em;
+}
+
+.ep-description {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ep-description__copy {
+  width: 50%;
+  font-size: 1.5rem;
+  margin-top: 0;
+  padding: 0 0.5em;
+}
+
+.ep-image__cyndi {
+  background-image: url(https://images.unsplash.com/photo-1594808985790-98a065b97476?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=646&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 20rem;
+  width: 50%;
 }

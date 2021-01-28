@@ -12,7 +12,7 @@
     <title>We Should Talk</title>
   </head>
   <body>
-    <header>
+    <header class="page_top">
       <div class="logo-section">
         <i class="fas fa-microphone-alt"></i>
         <h2 class="logo">We Should Talk</h2>
@@ -20,31 +20,36 @@
       <input type="checkbox" class="nav-toggle" id="nav-toggle" />
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#">Episodes</a></li>
         </ul>
       </nav>
       <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
     </header>
 
-    <div class="hero">
+    <section class="hero">
       <div class="banner-text">
         <h1 class="main-banner">We Should Talk</h1>
         <p>A friends and family interview podcast</p>
       </div>
-    </div>
+    </section>
 
     <section class="latest-episode">
+      <div class="latest-episode__banner"><h2>Latest Episodes</h2></div>
       <div class="episodes">
-        <div class="ep-banner"></div>
-        <div class="ep1">
-          <div class="cyndi-image"></div>
+        <div class="single__episode">
+          <div class="episode-1-image"></div>
           <h2>Episode 1: Cyndi</h2>
           <p>
             Cyndi is a mother of three, grandmother of 4, and the most prolific
-            artist I know of. Join me as I interview my mom in episode 1.
+            artist I know of. Join me as I interview my mom in
+            <a href="episode1.html">episode 1</a>.
           </p>
+        </div>
+        <div class="single__episode">
+          <div class="episode-2-image"></div>
+          <h2>Episode 2: TBA</h2>
+          <p>Our next episode will be released shortly!</p>
         </div>
       </div>
     </section>
