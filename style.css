@@ -1,5 +1,5 @@
 :root {
-  --background: rgba(255, 255, 255, 1);
+  --background: rgba(255, 255, 255, 0);
   --scrolled-background: rgba(219, 217, 217, 0);
 }
 
@@ -23,10 +23,13 @@ header {
   background: var(--background);
   text-align: center;
   position: fixed;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+  min-height: 90px;
   z-index: 999;
   width: 100%;
   margin-bottom: 0;
-  transition: background 500ms ease-in 10ms;
+  transition: top 0.2s ease-in-out;
   top: 0;
   border-radius: 0.35em;
 }
@@ -44,6 +47,11 @@ header {
 .fa-microphone-alt {
   font-size: 1.75rem;
   padding: 1em 0.5em;
+}
+
+h2 a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-toggle {
@@ -195,6 +203,10 @@ nav a:hover {
   background: var(--scrolled-background);
 }
 
+.nav-up {
+  top: -40px;
+}
+
 /* Hero image section */
 
 .hero {
@@ -226,6 +238,9 @@ nav a:hover {
 .hero p {
   font-size: 2rem;
   letter-spacing: 0.1em;
+  line-height: 1.5;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .latest-episode {
@@ -286,6 +301,27 @@ nav a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Episode Archives Page Template */
+
+.hero__episodes {
+  min-height: 60vh;
+  background-image: url(images/scream-kid-mic.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.hero__episodes h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.2em;
 }
 
 /* Single Episode Page Template */
