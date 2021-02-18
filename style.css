@@ -306,6 +306,24 @@ nav a:hover {
   background-repeat: no-repeat;
 }
 
+/* Media Queries for responsive episodes */
+
+@media screen and (max-width: 1000px) {
+  .episodes {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .single__episode {
+    width: 70%;
+    padding: 2em;
+    margin: 1rem auto;
+  }
+}
+
 /* Episode Archives Page Template */
 
 .hero__episodes {
@@ -358,16 +376,13 @@ nav a:hover {
 
 .ep-description__copy {
   width: 50%;
+  line-height: 1.5;
   font-size: 1.5rem;
   margin-top: 0;
   padding: 0 0.5em;
 }
 
 .ep-image__cyndi {
-  /* background-image: url(images/halloween.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   min-height: 20rem;
   width: 50%;
   display: flex;
@@ -377,7 +392,29 @@ nav a:hover {
 
 .responsive-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+}
+
+/* Media Queries for responsive episode info */
+
+@media screen and (max-width: 1000px) {
+  .ep-description {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ep-description__copy {
+    width: 75%;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-top: 0;
+    padding: 0 0.5em;
+  }
 }
 
 /* About Page */
@@ -400,4 +437,25 @@ nav a:hover {
   color: var(--light);
   border-radius: 3px;
   padding: 1em;
+}
+
+/*Media Query for responsive Headers */
+@media screen and (max-width: 1000px) {
+  .hero h1,
+  .hero__ep1 h1,
+  .hero__episodes h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero p {
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
