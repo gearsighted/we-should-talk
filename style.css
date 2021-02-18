@@ -1,6 +1,9 @@
 :root {
-  --background: rgba(255, 255, 255, 0);
-  --scrolled-background: rgba(219, 217, 217, 0);
+  --header-background: rgba(255, 255, 255, 0);
+  --light: #ffffff;
+  --dark: #373f51;
+  --danger: #f84aa7;
+  --success: #779be7;
 }
 
 *,
@@ -20,7 +23,7 @@ body {
 /* Nav styles  */
 
 header {
-  background: var(--background);
+  background: var(--header-background);
   text-align: center;
   position: fixed;
   transition: top 0.2s ease-in-out;
@@ -375,4 +378,26 @@ nav a:hover {
 .responsive-image {
   width: 100%;
   height: auto;
+}
+
+/* About Page */
+
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem;
+}
+
+.about p {
+  width: 70%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  background: var(--dark);
+  color: var(--light);
+  border-radius: 3px;
+  padding: 1em;
 }
