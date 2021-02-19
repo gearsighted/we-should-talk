@@ -1,5 +1,5 @@
 :root {
-  --header-background: rgba(255, 255, 255, 0);
+  --transparent-background: rgba(255, 255, 255, 0);
   --light: #ffffff;
   --dark: #373f51;
   --danger: #f84aa7;
@@ -22,12 +22,18 @@ body {
 
 /* Nav styles  */
 
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
 header {
-  background: var(--header-background);
+  background: var(--transparent-background);
   text-align: center;
   position: fixed;
   transition: top 0.2s ease-in-out;
   width: 100%;
+  max-width: 1850px;
   min-height: 90px;
   z-index: 999;
   width: 100%;
@@ -43,11 +49,13 @@ header {
 }
 
 .logo {
+  display: none;
   width: 75%;
   margin: auto 0;
 }
 
 .fa-microphone-alt {
+  color: var(--transparent-background);
   font-size: 1.75rem;
   padding: 1em 0.5em;
 }
@@ -75,7 +83,7 @@ h2 a {
 .nav-toggle-label::before,
 .nav-toggle-label::after {
   display: block;
-  background: white;
+  background: black;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -149,9 +157,23 @@ nav a:hover {
 
 /* transition above is 250ms transition with 250ms delay */
 
+/* media queries for responsive nav */
+
 @media screen and (min-width: 1100px) {
   .nav-toggle-label {
     display: none;
+  }
+
+  .logo {
+    display: flex;
+    width: 75%;
+    margin: auto 0 auto 0.75em;
+  }
+
+  .fa-microphone-alt {
+    color: black;
+    font-size: 1.75rem;
+    padding: 1em 0.5em;
   }
 
   header {
@@ -223,6 +245,8 @@ nav a:hover {
   display: grid;
   place-items: center;
   text-align: center;
+  border-radius: 2px;
+  filter: drop-shadow(0 2px 2px gray);
 }
 
 .banner-text {
@@ -289,6 +313,12 @@ nav a:hover {
 .single__episode {
   width: 50%;
   padding: 2em;
+  margin: 0 1rem;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px lightgray;
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 .episode-1-image {
@@ -297,6 +327,7 @@ nav a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 4px;
 }
 .episode-2-image {
   min-height: 20rem;
@@ -304,6 +335,7 @@ nav a:hover {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 4px;
 }
 
 /* Media Queries for responsive episodes */
@@ -343,6 +375,8 @@ nav a:hover {
   display: grid;
   place-items: center;
   text-align: center;
+  border-radius: 4px;
+  filter: drop-shadow(0 2px 2px gray);
 }
 
 .hero__episodes h1 {
@@ -364,6 +398,7 @@ nav a:hover {
   display: grid;
   place-items: center;
   text-align: center;
+  filter: drop-shadow(0 2px 2px gray);
 }
 
 .hero__ep1 h1 {
@@ -477,4 +512,57 @@ nav a:hover {
     width: 60%;
     margin: 0 auto;
   }
+}
+
+/* Footer Styles */
+
+footer {
+  padding: 1em;
+  width: 100%;
+  background: var(--dark);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-footer {
+  width: 50%;
+  color: var(--light);
+  padding: 2em 0 1em 4em;
+}
+
+.right-footer {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  color: var(--light);
+  padding: 2em 1em 2em 5em;
+}
+
+.bottom-footer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--light);
+}
+
+.left-footer ul {
+  font-size: 1.5rem;
+  list-style: none;
+  margin: 4rem 0 0 5rem;
+}
+
+.left-footer li {
+  margin: 0.75em 0;
+  letter-spacing: 0.2em;
+}
+
+.bottom-footer p {
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
+}
+
+.right-footer p {
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }
