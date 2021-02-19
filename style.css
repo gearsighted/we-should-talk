@@ -566,3 +566,47 @@ footer {
   letter-spacing: 0.1em;
   line-height: 1.5;
 }
+
+/* Media queries for responsive footer */
+
+@media screen and (max-width: 1000px) {
+  footer {
+    padding: 1em;
+    width: 100%;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .left-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--light);
+    padding: 1em;
+    margin: 0 auto;
+  }
+
+  .left-footer ul {
+    font-size: 1.5rem;
+    list-style: none;
+    margin: 0 auto;
+  }
+
+  .right-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--light);
+    padding: 1em;
+    margin: 0 auto;
+  }
+
+  .bottom-footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--light);
+  }
+}
