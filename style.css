@@ -557,7 +557,7 @@ footer {
   width: 100%;
   background: var(--dark);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -567,7 +567,8 @@ footer {
   align-items: center;
   width: 40%;
   color: var(--light);
-  padding: 0;
+  padding: 0 20rem 0 0;
+  /* margin: 0 15rem 0 1rem; */
 }
 
 .right-footer {
@@ -576,7 +577,8 @@ footer {
   align-items: center;
   width: 40%;
   color: var(--light);
-  padding: 0;
+  padding: 0 0 0 3rem;
+  flex-wrap: wrap;
 }
 
 .bottom-footer {
@@ -602,10 +604,13 @@ footer {
 }
 
 .right-footer p {
+  width: 100%;
   font-size: 1.25rem;
   letter-spacing: 0.1em;
   line-height: 1.5;
   text-align: center;
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* Media queries for responsive footer */
@@ -652,6 +657,7 @@ footer {
   }
 
   .right-footer p {
+    width: 100%;
     font-size: 1rem;
     letter-spacing: 0.1em;
     line-height: 1.5;
@@ -664,7 +670,7 @@ footer {
   }
 }
 
-/* Contact Page Styles */
+/* Contact Page Styles NEEDS WORK!!! --------------*/
 
 .contact {
   width: 100%;
@@ -672,9 +678,46 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightpink;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-color: lightblue;
+  width: 50%;
+}
+
+/* .contact form input {
+  margin: 1em auto;
+  border: 1px solid red;
+} */
+
+.contact form textarea {
+  border: 1px solid red;
+}
+
+.name_field {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+}
+
+.email_field {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+}
+
+.comments_field {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+}
+
+.button_area {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
 }
