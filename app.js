@@ -4,7 +4,8 @@ const nav = document.querySelector('nav');
 
 
 // All pages:
-    // Navbar hide on scroll
+    // Navbar hide on scroll--check--
+        //hide effect transition fix
 // Index.html:
     // Hero Image Carousel
     // Latest episode image focus effect

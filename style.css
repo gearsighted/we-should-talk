@@ -242,7 +242,7 @@ nav a:hover {
 
 .is-hidden {
   visibility: hidden;
-  all ease-in-out 250ms;
+  all: ease-in-out 250ms;
 }
 
 /* Hero image section */
@@ -574,6 +574,7 @@ iframe {
 footer {
   padding: 0;
   width: 100%;
+  min-height: 15rem;
   background: var(--dark);
   display: flex;
   justify-content: center;
@@ -581,13 +582,30 @@ footer {
   filter: drop-shadow(2px 0 2px gray);
 }
 
-.left-footer {
+/* .left-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 50%;
   color: var(--light);
   padding: 0 20rem 0 0;
+} */
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: var(--light);
+  /* padding: 0 20rem 0 0; */
+}
+
+.github-logo {
+  padding: 1rem;
+  margin: 0.5rem 2rem;
+}
+
+.insta-logo {
 }
 
 .right-footer {
