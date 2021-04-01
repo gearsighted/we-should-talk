@@ -235,12 +235,14 @@ nav a:hover {
 
 /* Navbar scroll effect */
 
-.scrolled {
-  background: var(--scrolled-background);
+.is-visible {
+  visibility: visible;
+  transition: all ease-in-out 250ms;
 }
 
-.nav-up {
-  top: -40px;
+.is-hidden {
+  visibility: hidden;
+  all ease-in-out 250ms;
 }
 
 /* Hero image section */
