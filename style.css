@@ -371,6 +371,10 @@ nav a:hover {
   border-radius: 4px;
 }
 
+.read-more {
+  display: none;
+}
+
 /* Media Queries for responsive episodes */
 
 @media screen and (max-width: 1000px) {
@@ -385,7 +389,7 @@ nav a:hover {
   .single__episode {
     width: 100%;
     padding: 2em;
-    margin: 0.25rem auto;
+    margin: 0.5rem auto;
     filter: drop-shadow(0 1px 1px gray);
   }
 
@@ -395,6 +399,15 @@ nav a:hover {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+  }
+
+  .read-more {
+    display: block;
+  }
+
+  .single__episode p {
+    display: none;
+    margin: 1rem 0;
   }
 }
 
