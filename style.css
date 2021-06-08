@@ -385,7 +385,7 @@ nav a:hover {
   .single__episode {
     width: 100%;
     padding: 2em;
-    margin: .25rem auto
+    margin: 0.25rem auto;
     filter: drop-shadow(0 1px 1px gray);
   }
 
