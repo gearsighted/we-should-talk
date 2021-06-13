@@ -587,7 +587,7 @@ iframe {
 footer {
   padding: 0;
   width: 100%;
-  min-height: 15rem;
+  min-height: 7rem;
   background: var(--dark);
   display: flex;
   justify-content: center;
@@ -613,14 +613,6 @@ footer {
   /* padding: 0 20rem 0 0; */
 }
 
-.github-logo {
-  padding: 1rem;
-  margin: 0.5rem 2rem;
-}
-
-.insta-logo {
-}
-
 .right-footer {
   display: flex;
   justify-content: center;
@@ -633,7 +625,7 @@ footer {
 
 .bottom-footer {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
   text-align: center;
   color: var(--light);
 }
